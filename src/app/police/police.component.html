@@ -1,0 +1,37 @@
+
+<div class="container">
+  <button class="btn btn-success">Add new police </button>
+  <div class="card">
+    <div class="card-header">
+      <p class="h2 text-primary">list of police</p>
+    </div>
+    <div class="card-content">
+      <div class="row">
+        <div class="col-md">
+          <table class="table table-borded">
+            <thead>
+              <tr>  
+                <th>sn</th>
+                <th>name</th>
+                <th>place</th>
+                <th>action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let police of polices">
+                <td>{{police.id}}</td>
+                <td>{{police.name}}</td>
+                <td>{{police.work_place}}</td>
+
+                <td><button class="btn btn-primary">edit</button>
+                  <button class="btn btn-danger mx-2">delete</button>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
